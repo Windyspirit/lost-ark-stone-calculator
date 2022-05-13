@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lost-ark-stone-calculator/static/css/main.9b0742d1.css",
+    "main.js": "/lost-ark-stone-calculator/static/js/main.3905f194.js",
+    "static/js/787.c2ca6e8a.chunk.js": "/lost-ark-stone-calculator/static/js/787.c2ca6e8a.chunk.js",
+    "index.html": "/lost-ark-stone-calculator/index.html",
+    "main.9b0742d1.css.map": "/lost-ark-stone-calculator/static/css/main.9b0742d1.css.map",
+    "main.3905f194.js.map": "/lost-ark-stone-calculator/static/js/main.3905f194.js.map",
+    "787.c2ca6e8a.chunk.js.map": "/lost-ark-stone-calculator/static/js/787.c2ca6e8a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b0742d1.css",
+    "static/js/main.3905f194.js"
+  ]
+}
