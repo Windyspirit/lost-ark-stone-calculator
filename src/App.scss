@@ -1,0 +1,308 @@
+$blue_validate: rgb(0, 171, 223);
+$blue_light: rgba(0, 171, 223, 0.4);
+$red_validate: rgba(231, 0, 0, 0.5);
+$red_light: rgba(255, 0, 0, 0.3);
+$green_light: rgba(100, 223, 121, 0.63);
+$green_border: rgba(52, 180, 52, 0.7);
+$EngravingNotTriedYet: rgb(180, 180, 180);
+$grey_button: grey;
+
+$rare_grade: $blue_validate;
+$rare_light_grade: $blue_light;
+$epic_grade: rgb(197, 0, 197);
+$epic_light_grade: rgba(197, 0, 197, 0.4);
+$legendary_grade: gold;
+$legendary_light_grade: rgba(255, 217, 0, 0.4);
+$relic_grade: orange;
+$relic_light_grade: rgba(255, 166, 0, 0.4);
+
+.App {
+  .strong {
+    font-weight: bold;
+  }
+  .margin-left1em {
+    margin-left: 1em;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .button {
+    background-color: lightgrey;
+    border: solid 2px $grey_button;
+    border-radius: 20px;
+  }
+  .button:hover {
+    background-color: rgba(248, 248, 248, 1);
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .calculator-frame {
+    .engraving-choices {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      .rarity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+          margin-bottom: 0.5em;
+        }
+        .rarity-box {
+          margin-right: 0.5em;
+          width: 90px;
+          height: 70px;
+          border-radius: 25px;
+          background-color: lightgrey;
+          border: solid 2px $grey_button;
+          justify-content: center;
+          align-items: center;
+        }
+        .rarity-box:hover {
+          background-color: rgb(248, 248, 248);
+        }
+        .Rare.active {
+          background-color: $rare_grade;
+          border: solid 2px $rare_grade;
+        }
+        .Rare.active:hover {
+          background-color: $blue_light;
+        }
+        .Epic.active {
+          background-color: $epic_grade;
+          border: solid 2px $epic_grade;
+        }
+        .Epic.active:hover {
+          background-color: $epic_light_grade;
+        }
+        .Legendary.active {
+          background-color: $legendary_grade;
+          border: solid 2px $legendary_grade;
+        }
+        .Legendary.active:hover {
+          background-color: $legendary_light_grade;
+        }
+        .Relic.active {
+          background-color: $relic_grade;
+          border: solid 2px $relic_grade;
+        }
+        .Relic.active:hover {
+          background-color: $relic_light_grade;
+        }
+      }
+      .wishes {
+        margin-left: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+          margin-bottom: 0.5em;
+        }
+        .wishes-list {
+          display: flex;
+          flex-direction: row;
+          .wishes-box:last-child {
+            background-color: $red_light;
+            border-color: $red_validate;
+          }
+          .wishes-box {
+            background-color: $blue_light;
+            margin-left: 0.5em;
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            height: 150px;
+            border: solid 2px $blue_validate;
+            border-radius: 25px;
+            justify-content: center;
+            align-items: center;
+            .box-number {
+              font-size: 3.5em;
+            }
+            .wishes-buttons {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              .wishes-buttons {
+                background-color: lightgrey;
+                height: 30px;
+                width: 40px;
+                border: solid 1px $grey_button;
+                border-radius: 20px;
+              }
+              .wishes-buttons:hover {
+                background-color: rgb(248, 248, 248);
+              }
+            }
+          }
+        }
+      }
+    }
+    .engraving-window {
+      background-color: rgb(231, 231, 231);
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .engraving-row:first-child {
+        padding-top: 1em;
+      }
+      .engraving-row:last-child {
+        .engraving-list {
+          .success {
+            .engraving-try {
+              background: $red_validate;
+            }
+            .engraving-result {
+              color: $red_validate;
+            }
+          }
+          .failure {
+            .engraving-try {
+              background: $red_light;
+              .engraving-fail-ext {
+                background-color: white;
+                height: 14px;
+                width: 14px;
+                text-align: center;
+                transform: translate(3px, 0) rotate(45deg);
+                .engraving-fail-int {
+                  height: 20px;
+                  transform: rotate(-45deg);
+                  width: 20px;
+                }
+              }
+            }
+            .engraving-result {
+              color: $red_validate;
+            }
+          }
+        }
+        .engraving-block-probabilities {
+          .engraving-success {
+            background-color: $red_validate;
+            border-color: $red_validate;
+          }
+          .engraving-success:hover {
+            background-color: $red_light;
+          }
+          .engraving-failure {
+            background-color: $green_border;
+            border-color: $green_border;
+          }
+          .engraving-failure:hover {
+            background-color: $green_light;
+          }
+        }
+      }
+      .engraving-row {
+        padding: 0 1em 1em;
+        display: flex;
+        flex-direction: row;
+
+        .engraving-list {
+          display: flex;
+          flex-direction: row;
+
+          .engraving-box {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .engraving-try {
+              height: 20px;
+              text-align: center;
+              transform: rotate(45deg);
+              width: 20px;
+              .engraving-count {
+                color: rgb(116, 116, 116);
+                display: table-cell;
+                height: 20px;
+                transform: rotate(-45deg);
+                vertical-align: middle;
+                width: 20px;
+              }
+            }
+          }
+          .empty {
+            .engraving-try {
+              background: $EngravingNotTriedYet;
+            }
+          }
+          .success {
+            .engraving-try {
+              background: $blue_validate;
+            }
+            .engraving-result {
+              color: $blue_validate;
+            }
+          }
+          .failure {
+            .engraving-try {
+              background: $blue_light;
+              .engraving-fail-ext {
+                background-color: white;
+                height: 14px;
+                width: 14px;
+                text-align: center;
+                transform: translate(3px, 0) rotate(45deg);
+                .engraving-fail-int {
+                  height: 20px;
+                  transform: rotate(-45deg);
+                  width: 20px;
+                }
+              }
+            }
+            .engraving-result {
+              color: rgba(0, 171, 223, 0.3);
+            }
+          }
+        }
+        .engraving-block-probabilities {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .engraving-probability {
+          }
+          .button {
+            border: solid 2px rgb(197, 197, 197);
+            border-radius: 20px;
+            height: 50px;
+            width: 80px;
+          }
+          .engraving-success {
+            background-color: $green_border;
+            border-color: $green_border;
+          }
+          .engraving-success:hover {
+            background-color: $green_light;
+          }
+          .engraving-failure {
+            background-color: $red_validate;
+            border-color: $red_validate;
+          }
+          .engraving-failure:hover {
+            background-color: $red_light;
+          }
+          .engraving-suggested-action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(214, 214, 214);
+            color: rgb(255, 238, 0);
+            border: solid 2px $grey_button;
+            border-radius: 20px;
+            height: 50px;
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+}
